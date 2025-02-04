@@ -1,0 +1,27 @@
+class Main {
+    public static void main(String[] args) {
+        String str="b3c6d15";
+        char temp='_';
+        String r_str="";
+        int num=0;
+        for(char ch : str.toCharArray()){
+            if(Character.isDigit(ch)){
+                num=(num*10) +(ch-'0');
+            }
+            else{
+                
+                r_str+=String.valueOf(temp).repeat(num);
+                temp=ch;
+                num=0;
+                
+            }
+        }
+        r_str+=String.valueOf(temp).repeat(num);
+        System.out.print(r_str);
+    }
+}
+
+
+
+Eg 1: Input: a1b10
+       Output: abbbbbbbbbb
