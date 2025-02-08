@@ -1,0 +1,17 @@
+class Solution {
+    public int kthSmallest(int[][] matrix, int k) {
+         PriorityQueue<Integer> maxHeap = new PriorityQueue<>();
+         for(int i=0;i<matrix[0].length;i++){
+            for(int j=0;j<matrix.length;j++){
+                maxHeap.add(matrix[i][j]);
+            }
+         }
+         int kthSmallest = -1;
+        for (int i = 0; i < k; i++) {
+            kthSmallest = maxHeap.poll();
+        }
+
+        return kthSmallest;
+
+    }
+}
