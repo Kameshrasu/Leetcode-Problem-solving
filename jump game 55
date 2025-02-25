@@ -1,0 +1,17 @@
+class Solution {
+    public boolean canJump(int[] nums) {
+      int i=0;
+       while(i<nums.length){
+        int pos = nums[i];
+        if(pos==0) break;
+        else     i+=pos;
+       }
+
+
+
+
+       if(i==nums.length-1) return true;
+       return false;
+        
+    }
+}
